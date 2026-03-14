@@ -139,13 +139,14 @@ document.getElementById("videoContainer").innerHTML=
 
 }
 
-/* -------- DRAG POLAROID ESTÁVEL -------- */
+/* -------- DRAG POLAROID CORRETO -------- */
 
+const stack = document.getElementById("stack")
 const polaroids = document.querySelectorAll(".polaroid")
 
 let active = null
-let shiftX = 0
-let shiftY = 0
+let offsetX = 0
+let offsetY = 0
 
 polaroids.forEach(polaroid => {
 
@@ -155,8 +156,8 @@ active = polaroid
 
 const rect = polaroid.getBoundingClientRect()
 
-shiftX = e.clientX - rect.left
-shiftY = e.clientY - rect.top
+offsetX = e.clientX - rect.left
+offsetY = e.clientY - rect.top
 
 })
 
@@ -166,8 +167,10 @@ document.addEventListener("mousemove", (e) => {
 
 if(!active) return
 
-active.style.left = (e.clientX - shiftX) + "px"
-active.style.top = (e.clientY - shiftY) + "px"
+const stackRect = stack.getBoundingClientRect()
+
+active.style.left = (e.clientX - stackRect.left - offsetX) + "px"
+active.style.top = (e.clientY - stackRect.top - offsetY) + "px"
 
 })
 
@@ -176,6 +179,7 @@ document.addEventListener("mouseup", () => {
 active = null
 
 })
+
 
 
 
