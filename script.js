@@ -101,43 +101,45 @@ document.getElementById("videoContainer").innerHTML=
 
 }
 
-/* ---------------- ARRASTAR POLAROID ---------------- */
+/* -------- DRAG POLAROID -------- */
 
-const polaroids=document.querySelectorAll(".polaroid")
+const polaroids = document.querySelectorAll(".polaroid")
 
-let current=null
-let offsetX=0
-let offsetY=0
+polaroids.forEach(polaroid => {
 
-polaroids.forEach(card=>{
+let offsetX
+let offsetY
+let dragging = false
 
-card.addEventListener("mousedown",(e)=>{
+polaroid.addEventListener("mousedown", (e) => {
 
-current=card
+dragging = true
 
-const rect=card.getBoundingClientRect()
+offsetX = e.offsetX
+offsetY = e.offsetY
 
-offsetX=e.clientX-rect.left
-offsetY=e.clientY-rect.top
+polaroid.style.position = "absolute"
+polaroid.style.zIndex = 1000
+
+})
+
+document.addEventListener("mousemove", (e) => {
+
+if(!dragging) return
+
+polaroid.style.left = (e.pageX - offsetX) + "px"
+polaroid.style.top = (e.pageY - offsetY) + "px"
+
+})
+
+document.addEventListener("mouseup", () => {
+
+dragging = false
 
 })
 
 })
 
-document.addEventListener("mousemove",(e)=>{
-
-if(!current) return
-
-current.style.left=(e.clientX-offsetX)+"px"
-current.style.top=(e.clientY-offsetY)+"px"
-
-})
-
-document.addEventListener("mouseup",()=>{
-
-current=null
-
-})
 
 
 
