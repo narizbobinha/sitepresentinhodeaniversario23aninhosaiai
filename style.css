@@ -12,12 +12,17 @@ cursor:url("normal.png") 8 8, auto;
 overflow-x:hidden;
 }
 
+/* cursor de clique */
+
 button,
 .opcao,
 .opcao img,
-.magical-btn {
+.magical-btn,
+img {
 
 cursor:url("point.png") 8 8, pointer;
+
+}
 
 }
 
