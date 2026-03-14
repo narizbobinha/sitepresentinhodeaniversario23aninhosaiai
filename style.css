@@ -1,24 +1,27 @@
+:root{
+--bg1:#0b0f19;
+--bg2:#16213e;
+--bg3:#0f3460;
+--accent:#7bffba;
+}
+
 body{
+
 margin:0;
+
 font-family:'Quicksand',sans-serif;
 
-background:linear-gradient(-45deg,#05070f,#0b1f3a,#163b6d,#08121f);
+background:linear-gradient(-45deg,var(--bg1),var(--bg2),var(--bg3),#000);
+
 background-size:400% 400%;
-animation:gradientMove 18s ease infinite;
+
+animation:gradientBG 20s ease infinite;
 
 color:white;
 
-cursor:url("normal.png") 8 8, auto;
 overflow-x:hidden;
-}
 
-/* movimento suave do degradê */
-
-@keyframes gradientMove{
-
-0%{background-position:0% 50%;}
-50%{background-position:100% 50%;}
-100%{background-position:0% 50%;}
+cursor:url("normal.png") 8 8, auto;
 
 }
 
@@ -26,159 +29,22 @@ button,.polaroid,.opcao{
 cursor:url("point.png") 8 8,pointer;
 }
 
-section{
-min-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-gap:40px;
-}
+@keyframes gradientBG{
 
-img,
-button,
-.polaroid,
-.opcao{
-cursor: url("point.png") 8 8, pointer !important;
-}
-
-.glow-text{
-font-family:'Cormorant Garamond',serif;
-font-size:4rem;
-text-shadow:0 0 15px #7bffba;
-}
-
-.opcoes{
-display:flex;
-gap:80px;
-}
-
-.opcao img{
-width:260px;
-height:260px;
-border-radius:20px;
-}
-
-#linha{
-width:700px;
-height:2px;
-background:white;
-margin-bottom:80px;
-}
-
-#stack{
-position:relative;
-width:500px;
-height:350px;
-}
-
-.polaroid{
-position:absolute;
-background:white;
-padding:12px;
-border-radius:8px;
-box-shadow:0 10px 30px rgba(0,0,0,0.4);
-cursor:grab;
-user-select:none;
-}
-
-.polaroid{
-cursor:grab;
-}
-
-.polaroid:active{
-cursor:grabbing;
-}
-
-.polaroid img{
-width:300px;
-height:300px;
-object-fit:cover;
-}
-
-.polaroid:nth-child(1){
-top:0;
-left:80px;
-}
-
-.polaroid:nth-child(2){
-top:30px;
-left:200px;
-}
-
-.polaroid:nth-child(3){
-top:80px;
-left:120px;
-}
-
-.polaroid:nth-child(4){
-top:120px;
-left:260px;
-}
-
-.poemaBox{
-max-width:800px;
-background:rgba(0,0,0,0.5);
-padding:60px;
-border-radius:25px;
-font-family:'Cormorant Garamond',serif;
-font-size:2rem;
-text-align:center;
-white-space: pre-line;
-}
-
-.magical-btn{
-padding:15px 40px;
-border-radius:30px;
-border:1px solid white;
-background:transparent;
-color:white;
-font-size:1.2rem;
-}
-
-video{
-margin-top:40px;
-height:500px;
-border-radius:20px;
-}
-
-#stars{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:200%;
-
-background-image:radial-gradient(white 2px, transparent 2px);
-background-size:90px 90px;
-
-opacity:0.45;
-
-animation:starsFall 80s linear infinite;
-
-pointer-events:none;
-z-index:-1;
-}
-
-@keyframes starsFall{
-
-0%{
-transform:translateY(-50%);
-}
-
-100%{
-transform:translateY(0%);
-}
+0%{background-position:0% 50%}
+50%{background-position:100% 50%}
+100%{background-position:0% 50%}
 
 }
 
 #cursor-glow{
+
 position:fixed;
 
-width:220px;
-height:220px;
+width:250px;
+height:250px;
 
-background:radial-gradient(circle, rgba(120,200,255,0.18), transparent 70%);
+background:radial-gradient(circle,rgba(123,255,186,0.15),transparent 70%);
 
 border-radius:50%;
 
@@ -186,100 +52,183 @@ pointer-events:none;
 
 transform:translate(-50%,-50%);
 
-z-index:999;
+z-index:9999;
+
 }
 
-#bubbles{
+#stars{
+
 position:fixed;
-top:0;
-left:0;
+
 width:100%;
-height:100%;
-pointer-events:none;
-overflow:hidden;
-z-index:-1;
-}
+height:200%;
 
-.bubble{
+background-image:radial-gradient(white 1px,transparent 1px);
 
-position:absolute;
+background-size:80px 80px;
 
-bottom:-100px;
+opacity:0.2;
 
-background:rgba(255,255,255,0.08);
-
-border-radius:50%;
-
-animation:floatUp linear infinite;
+animation:starsFall 120s linear infinite;
 
 }
 
-@keyframes floatUp{
+@keyframes starsFall{
 
-0%{
-transform:translateY(0);
-opacity:0;
-}
-
-20%{
-opacity:0.6;
-}
-
-100%{
-transform:translateY(-120vh);
-opacity:0;
-}
+0%{transform:translateY(0)}
+100%{transform:translateY(-50%)}
 
 }
 
-@media (max-width: 768px){
+section{
+
+min-height:100vh;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+gap:40px;
+
+}
 
 .glow-text{
-font-size:2rem;
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:4rem;
+
+text-shadow:0 0 20px var(--accent);
+
 text-align:center;
+
 }
 
 .opcoes{
-flex-direction:column;
-gap:40px;
+
+display:flex;
+
+gap:80px;
+
 }
 
 .opcao img{
-width:180px;
-height:180px;
-}
 
-.poemaBox{
-padding:30px;
-font-size:1.4rem;
-max-width:90%;
+width:260px;
+height:260px;
+
+border-radius:20px;
+
 }
 
 #linha{
-width:90%;
-}
 
-.polaroid img{
-width:220px;
-height:220px;
-}
+width:900px;
+height:2px;
 
-video{
-width:90%;
-height:auto;
-}
+background:white;
+
+box-shadow:0 0 15px white;
+
+margin-bottom:80px;
 
 }
-
-@media (max-width:768px){
 
 #stack{
-width:100%;
-height:300px;
+
+position:relative;
+
+width:500px;
+height:350px;
+
 }
 
 .polaroid{
-transform:scale(0.8);
-}
+
+position:absolute;
+
+background:white;
+
+padding:12px;
+
+border-radius:8px;
+
+box-shadow:0 10px 30px rgba(0,0,0,0.4);
 
 }
+
+.polaroid img{
+
+width:320px;
+height:320px;
+
+object-fit:cover;
+
+}
+
+.polaroid:nth-child(1){
+
+transform:rotate(-6deg);
+top:0;
+left:40px;
+
+}
+
+.polaroid:nth-child(2){
+
+transform:rotate(7deg);
+top:20px;
+left:120px;
+
+}
+
+.poemaBox{
+
+max-width:800px;
+
+background:rgba(0,0,0,0.4);
+
+backdrop-filter:blur(10px);
+
+padding:60px;
+
+border-radius:25px;
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:2rem;
+
+text-align:center;
+
+}
+
+.magical-btn{
+
+padding:15px 40px;
+
+border-radius:30px;
+
+border:1px solid white;
+
+background:transparent;
+
+color:white;
+
+font-size:1.2rem;
+
+}
+
+video{
+
+margin-top:40px;
+
+height:500px;
+
+border-radius:20px;
+
+}
+
