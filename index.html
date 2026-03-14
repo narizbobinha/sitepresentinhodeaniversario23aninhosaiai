@@ -21,23 +21,27 @@
 <div id="bubbles"></div>
 <div id="cursor-glow"></div>
 
-<audio id="musica" loop>
-<source src="musica.mp3" type="audio/mpeg">
+<audio id="musicaA" loop>
+<source src="musicaA.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="musicaB" loop>
+<source src="musicaB.mp3" type="audio/mpeg">
 </audio>
 
 <section id="inicio">
 
-<img src="opcao1.png"
+<img src="opcaoA.png"
 class="opcao"
-onmouseover="this.src='opcao1.gif'"
-onmouseout="this.src='opcao1.png'"
-onclick="iniciarSite()">
+onmouseover="this.src='opcaoA.gif'"
+onmouseout="this.src='opcaoA.png'"
+onclick="escolherOpcao('A')">
 
-<img src="opcao2.png"
+<img src="opcaoB.png"
 class="opcao"
-onmouseover="this.src='opcao2.gif'"
-onmouseout="this.src='opcao2.png'"
-onclick="iniciarSite()">
+onmouseover="this.src='opcaoB.gif'"
+onmouseout="this.src='opcaoB.png'"
+onclick="escolherOpcao('B')">
 
 </section>
 
@@ -49,13 +53,13 @@ onclick="iniciarSite()">
 
 <div id="stack">
 
-<div class="polaroid">
-<img src="desenho1.png">
-</div>
+<div class="polaroid"><img src="desenho1.png"></div>
 
-<div class="polaroid">
-<img src="desenho2.png">
-</div>
+<div class="polaroid"><img src="desenho2.png"></div>
+
+<div class="polaroid"><img src="desenho3.png"></div>
+
+<div class="polaroid"><img src="desenho4.png"></div>
 
 </div>
 
