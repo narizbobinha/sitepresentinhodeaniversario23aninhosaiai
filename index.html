@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
 
 <meta charset="UTF-8">
@@ -24,12 +25,16 @@
 
 <div class="opcoes">
 
-<div class="opcao" id="opcaoA">
-<img id="imgA" src="opcaoA.png">
+<div class="opcao" onclick="escolha('A')">
+<img id="imgA" src="opcaoA.png"
+onmouseover="gifA()"
+onmouseout="pngA()">
 </div>
 
-<div class="opcao" id="opcaoB">
-<img id="imgB" src="opcaoB.png">
+<div class="opcao" onclick="escolha('B')">
+<img id="imgB" src="opcaoB.png"
+onmouseover="gifB()"
+onmouseout="pngB()">
 </div>
 
 </div>
@@ -37,7 +42,8 @@
 </section>
 
 
-<section id="galeria" class="hidden">
+
+<section id="galeria" style="display:none">
 
 <h2 class="glow-text">pendure os desenhos da maneira que preferir</h2>
 
@@ -58,30 +64,34 @@
 </section>
 
 
-<section id="poemaSection" class="hidden">
+
+<section id="poemaSection" style="display:none">
 
 <div class="poemaBox">
+
 <p id="poema"></p>
+
 </div>
 
-<button id="btnPoema" class="magical-btn">
+<button onclick="proximoPoema()" class="magical-btn">
 quero mais
 </button>
 
 </section>
 
 
-<section id="final" class="hidden">
+
+<section id="final" style="display:none">
 
 <h2 class="glow-text">eu te amo, e vc?</h2>
 
 <div id="botoesAmor">
 
-<button id="btnVideo1" class="magical-btn">
+<button onclick="mostrarVideo('video1.mp4')" class="magical-btn">
 err
 </button>
 
-<button id="btnVideo2" class="magical-btn">
+<button onclick="mostrarVideo('video2.mp4')" class="magical-btn">
 que site maneiro
 </button>
 
@@ -94,5 +104,7 @@ que site maneiro
 <script src="script.js"></script>
 
 </body>
+
 </html>
+
 
