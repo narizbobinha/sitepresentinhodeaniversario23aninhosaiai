@@ -221,3 +221,42 @@ opacity:0;
 }
 
 }
+
+@media (max-width: 768px){
+
+.glow-text{
+font-size:2rem;
+text-align:center;
+}
+
+.opcoes{
+flex-direction:column;
+gap:40px;
+}
+
+.opcao img{
+width:180px;
+height:180px;
+}
+
+.poemaBox{
+padding:30px;
+font-size:1.4rem;
+max-width:90%;
+}
+
+#linha{
+width:90%;
+}
+
+.polaroid img{
+width:220px;
+height:220px;
+}
+
+video{
+width:90%;
+height:auto;
+}
+
+}
