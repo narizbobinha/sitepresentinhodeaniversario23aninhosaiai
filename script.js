@@ -1,31 +1,43 @@
+document.addEventListener("DOMContentLoaded",()=>{
+
 const glow = document.getElementById("cursor-glow")
 
 document.addEventListener("mousemove",(e)=>{
-
-glow.style.left = e.clientX + "px"
-glow.style.top = e.clientY + "px"
-
+glow.style.left = e.clientX+"px"
+glow.style.top = e.clientY+"px"
 })
+
 
 const musica = document.getElementById("musica")
 
-function escolha(opcao){
-
 const inicio = document.getElementById("inicio")
+const galeria = document.getElementById("galeria")
+const poemaSection = document.getElementById("poemaSection")
+const final = document.getElementById("final")
 
-inicio.style.opacity="0"
+const imgA = document.getElementById("imgA")
+const imgB = document.getElementById("imgB")
 
-setTimeout(()=>{
+imgA.addEventListener("mouseenter",()=>imgA.src="opcaoA.gif")
+imgA.addEventListener("mouseleave",()=>imgA.src="opcaoA.png")
+
+imgB.addEventListener("mouseenter",()=>imgB.src="opcaoB.gif")
+imgB.addEventListener("mouseleave",()=>imgB.src="opcaoB.png")
+
+
+document.getElementById("opcaoA").onclick=()=>escolha("A")
+document.getElementById("opcaoB").onclick=()=>escolha("B")
+
+
+function escolha(opcao){
 
 inicio.style.display="none"
 
-document.getElementById("galeria").style.display="flex"
-document.getElementById("poemaSection").style.display="flex"
-document.getElementById("final").style.display="flex"
+galeria.classList.remove("hidden")
+poemaSection.classList.remove("hidden")
+final.classList.remove("hidden")
 
-document.getElementById("galeria").scrollIntoView({behavior:"smooth"})
-
-},800)
+galeria.scrollIntoView({behavior:"smooth"})
 
 if(opcao==="A"){musica.src="musicaA.mp3"}
 if(opcao==="B"){musica.src="musicaB.mp3"}
@@ -36,21 +48,21 @@ musica.play()
 
 
 
-const poemas = [
+const poemas=[
 
 `Que meu amor por você seja o único idioma que você entenda, que seja o altar mais alto para você ficar e que meus sentimentos sejam sua única demanda. Espero que meu calor transpareça segurança para você, pois é nas chamas que se cria a paixão.`,
 
-`O mundo pode tentar convencer-te de que teus sonhos são grandes demais, ou que teus passos são lentos demais. Mas eu conheço o teu espírito. E sei que dentro de ti existe um homem capaz de atravessar noites inteiras de dúvida apenas para alcançar a própria luz. Mesmo que confuso ou inseguro, seus desejos nunca foram impuros.`,
+`O mundo pode tentar convencer-te de que teus sonhos são grandes demais, ou que teus passos são lentos demais.`,
 
-`Se um dia tua fé em si mesmo vacilar, empresto-te a minha. Pois eu acredito em você com a mesma intensidade com que o meu coração aprendeu a amar você.`,
+`Se um dia tua fé em si mesmo vacilar, empresto-te a minha.`,
 
-`Se eu pudesse te dar um presente digno, não seria algo que coubesse nas mãos. Eu te daria minhas madrugadas pensando em você, minhas preces silenciosas pelo teu caminho, e essa estranha devoção que faz minha alma se inclinar sempre na tua direção.`,
+`Se eu pudesse te dar um presente digno, não seria algo que coubesse nas mãos.`,
 
-`sei que não sou o que deseja, não sou o remédio que cura tuas dores, nem o escudo que te livra das fraquezas. sou apenas a verdade nua, que não se molda, mesmo quando se oferece inteira. e, ainda assim, teu olhar me fere e me salva.`,
+`sei que não sou o que deseja.`,
 
 `você me mata, mas também me devolve à vida.`,
 
-`e se eu tivesse que escolher entre passar anos sem você ou viver o caos ao teu lado, eu escolheria você.`,
+`não é que eu só vivo se eu tiver você é que eu vivo por você.`,
 
 `Feliz aniversário, eu gosto muito de você.`,
 
@@ -59,18 +71,14 @@ const poemas = [
 ]
 
 let index=0
-
 const poemaEl=document.getElementById("poema")
 
 poemaEl.innerText=poemas[0]
 
-function proximoPoema(){
+document.getElementById("btnPoema").onclick=()=>{
 
 index++
-
-if(index>=poemas.length){
-index=0
-}
+if(index>=poemas.length) index=0
 
 poemaEl.innerText=poemas[index]
 
@@ -108,13 +116,12 @@ active.style.top=(e.clientY-offsetY)+"px"
 
 })
 
-document.addEventListener("mouseup",()=>{
-
-active=null
-
-})
+document.addEventListener("mouseup",()=>active=null)
 
 
+
+document.getElementById("btnVideo1").onclick=()=>mostrarVideo("video1.mp4")
+document.getElementById("btnVideo2").onclick=()=>mostrarVideo("video2.mp4")
 
 function mostrarVideo(video){
 
@@ -123,10 +130,12 @@ musica.pause()
 document.getElementById("botoesAmor").innerHTML=""
 
 document.getElementById("videoContainer").innerHTML=
-
 `<video controls autoplay>
 <source src="${video}" type="video/mp4">
 </video>`
 
 }
+
+})
+
 
