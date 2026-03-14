@@ -192,6 +192,32 @@ active = null
 
 })
 
+const bubbleContainer = document.getElementById("bubbles")
+
+function createBubble(){
+
+const bubble = document.createElement("div")
+
+bubble.classList.add("bubble")
+
+const size = Math.random()*60+20
+
+bubble.style.width = size+"px"
+bubble.style.height = size+"px"
+
+bubble.style.left = Math.random()*100+"vw"
+
+bubble.style.animationDuration = (Math.random()*10+10)+"s"
+
+bubbleContainer.appendChild(bubble)
+
+setTimeout(()=>{
+bubble.remove()
+},20000)
+
+}
+
+setInterval(createBubble,800)
 
 
 
