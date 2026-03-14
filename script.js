@@ -248,5 +248,17 @@ popup.addEventListener("click", ()=>{
 popup.style.display="none";
 });
 
+const garchomp = document.getElementById("garchomp");
+const finalSection = document.getElementById("final");
+
+window.addEventListener("scroll", () => {
+
+const finalTop = finalSection.getBoundingClientRect().top;
+
+if(finalTop < window.innerHeight - 100){
+garchomp.style.display = "block";
+}
+
+});
 
 
