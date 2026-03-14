@@ -139,7 +139,7 @@ document.getElementById("videoContainer").innerHTML=
 
 }
 
-/* -------- DRAG POLAROID CORRIGIDO -------- */
+/* -------- DRAG POLAROID FINAL (SEM TELEPORTE) -------- */
 
 const polaroids = document.querySelectorAll(".polaroid")
 
@@ -158,7 +158,7 @@ const rect = polaroid.getBoundingClientRect()
 offsetX = e.clientX - rect.left
 offsetY = e.clientY - rect.top
 
-polaroid.style.position = "absolute"
+polaroid.style.position = "fixed"
 polaroid.style.zIndex = 1000
 
 })
@@ -179,6 +179,7 @@ document.addEventListener("mouseup", () => {
 active = null
 
 })
+
 
 
 
