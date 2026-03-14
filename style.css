@@ -1,20 +1,25 @@
 body{
 margin:0;
 font-family:'Quicksand',sans-serif;
-background:#0b0f19;
+
+background:linear-gradient(-45deg,#05070f,#0b1f3a,#163b6d,#08121f);
+background-size:400% 400%;
+animation:gradientMove 18s ease infinite;
+
 color:white;
+
 cursor:url("normal.png") 8 8, auto;
+overflow-x:hidden;
 }
 
-button,.polaroid,.opcao{
-cursor:url("point.png") 8 8,pointer;
-}
+/* movimento suave do degradê */
 
-img,
-button,
-.polaroid,
-.opcao{
-cursor: url("point.png") 8 8, pointer !important;
+@keyframes gradientMove{
+
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+
 }
 
 section{
