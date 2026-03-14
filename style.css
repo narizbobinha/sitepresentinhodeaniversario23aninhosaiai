@@ -91,6 +91,16 @@ top:30px;
 left:200px;
 }
 
+.polaroid:nth-child(3){
+top:80px;
+left:120px;
+}
+
+.polaroid:nth-child(4){
+top:120px;
+left:260px;
+}
+
 .poemaBox{
 max-width:800px;
 background:rgba(0,0,0,0.5);
