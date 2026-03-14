@@ -1,10 +1,13 @@
-function iniciarSite(){
+function escolherOpcao(tipo){
 
 document.getElementById("inicio").style.display="none";
-
 document.getElementById("galeria").style.display="block";
 
-document.getElementById("musica").play();
+if(tipo==="A"){
+document.getElementById("musicaA").play();
+}else{
+document.getElementById("musicaB").play();
+}
 
 }
 
@@ -12,10 +15,8 @@ function mostrarVideo(video){
 
 document.getElementById("botoesAmor").style.display="none";
 
-document.getElementById("musica").pause();
-
 document.getElementById("videoContainer").innerHTML=
-`<video controls autoplay width="400">
+`<video controls autoplay width="420">
 <source src="${video}" type="video/mp4">
 </video>`;
 
@@ -52,48 +53,3 @@ document.removeEventListener("mousemove",mover);
 
 });
 
-window.addEventListener("scroll",()=>{
-
-const final=document.getElementById("final");
-
-if(!final)return;
-
-const pos=final.getBoundingClientRect().top;
-
-if(pos<window.innerHeight-100){
-
-document.getElementById("garchomp").style.display="block";
-
-}
-
-});
-
-const garchomp=document.getElementById("garchomp");
-
-const popup=document.getElementById("garchompPopup");
-
-const squeak=document.getElementById("squeak");
-
-garchomp.addEventListener("click",()=>{
-
-popup.style.display="flex";
-
-squeak.play();
-
-confetti({
-
-particleCount:120,
-
-spread:70,
-
-origin:{y:0.6}
-
-});
-
-});
-
-popup.addEventListener("click",()=>{
-
-popup.style.display="none";
-
-});
