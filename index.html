@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+
+<meta charset="UTF-8">
+<title>para você</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div id="stars"></div>
+<div id="bubbles"></div>
+<div id="cursor-glow"></div>
+
+<audio id="musica" loop></audio>
+
+<section id="inicio">
+
+<h1 class="glow-text">oii, escolhe um rs</h1>
+
+<div class="opcoes">
+
+<div class="opcao" onclick="escolha('A')">
+<img id="imgA" src="opcaoA.png"
+onmouseover="gifA()"
+onmouseout="pngA()">
+</div>
+
+<div class="opcao" onclick="escolha('B')">
+<img id="imgB" src="opcaoB.png"
+onmouseover="gifB()"
+onmouseout="pngB()">
+</div>
+
+</div>
+
+</section>
+
+
+
+<section id="galeria" style="display:none">
+
+<h2 class="glow-text">pendure os desenhos da maneira que preferir</h2>
+
+<div id="linha"></div>
+
+<div id="stack">
+
+<div class="polaroid">
+<img src="desenho1.png">
+</div>
+
+<div class="polaroid">
+<img src="desenho2.png">
+</div>
+
+</div>
+
+</section>
+
+
+
+<section id="poemaSection" style="display:none">
+
+<div class="poemaBox">
+
+<p id="poema"></p>
+
+</div>
+
+<button onclick="proximoPoema()" class="magical-btn">
+quero mais
+</button>
+
+</section>
+
+
+
+<section id="final" style="display:none">
+
+<h2 class="glow-text">eu te amo, e vc?</h2>
+
+<div id="botoesAmor">
+
+<button onclick="mostrarVideo('video1.mp4')" class="magical-btn">
+err
+</button>
+
+<button onclick="mostrarVideo('video2.mp4')" class="magical-btn">
+que site maneiro
+</button>
+
+</div>
+
+<div id="videoContainer"></div>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
