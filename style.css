@@ -10,6 +10,13 @@ button,.polaroid,.opcao{
 cursor:url("point.png") 8 8,pointer;
 }
 
+img,
+button,
+.polaroid,
+.opcao{
+cursor: url("point.png") 8 8, pointer !important;
+}
+
 section{
 min-height:100vh;
 display:flex;
