@@ -260,3 +260,17 @@ height:auto;
 }
 
 }
+
+@media (max-width:768px){
+
+#stack{
+width:100%;
+height:300px;
+}
+
+.polaroid{
+transform:scale(0.8);
+}
+
+}
+
