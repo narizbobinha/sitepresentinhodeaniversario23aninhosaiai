@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html>
 
 <head>
 
@@ -21,31 +21,25 @@
 <div id="bubbles"></div>
 <div id="cursor-glow"></div>
 
-<audio id="musica" loop></audio>
+<audio id="musica" loop>
+<source src="musica.mp3" type="audio/mpeg">
+</audio>
 
 <section id="inicio">
 
-<h1 class="glow-text">oii, escolhe um rs</h1>
+<img src="opcao1.png"
+class="opcao"
+onmouseover="this.src='opcao1.gif'"
+onmouseout="this.src='opcao1.png'"
+onclick="iniciarSite()">
 
-<div class="opcoes">
-
-<div class="opcao" onclick="escolha('A')">
-<img id="imgA" src="opcaoA.png"
-onmouseover="gifA()"
-onmouseout="pngA()">
-</div>
-
-<div class="opcao" onclick="escolha('B')">
-<img id="imgB" src="opcaoB.png"
-onmouseover="gifB()"
-onmouseout="pngB()">
-</div>
-
-</div>
+<img src="opcao2.png"
+class="opcao"
+onmouseover="this.src='opcao2.gif'"
+onmouseout="this.src='opcao2.png'"
+onclick="iniciarSite()">
 
 </section>
-
-
 
 <section id="galeria" style="display:none">
 
@@ -63,55 +57,7 @@ onmouseout="pngB()">
 <img src="desenho2.png">
 </div>
 
-<div class="polaroid">
-<img src="desenho3.png">
 </div>
-
-<div class="polaroid">
-<img src="desenho4.png">
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<section id="poemaSection" style="display:none">
-
-<div class="poemaBox">
-
-<p id="poema"></p>
-
-</div>
-
-<button onclick="proximoPoema()" class="magical-btn">
-quero mais
-</button>
-
-</section>
-
-
-
-<section id="final" style="display:none">
-
-<h2 class="glow-text">eu te amo, e vc?</h2>
-
-<div id="botoesAmor">
-
-<button onclick="mostrarVideo('video1.mp4')" class="magical-btn">
-err
-</button>
-
-<button onclick="mostrarVideo('video2.mp4')" class="magical-btn">
-que site maneiro
-</button>
-
-</div>
-
-<div id="videoContainer"></div>
 
 </section>
 
@@ -135,22 +81,22 @@ que site maneiro
 
 </section>
 
-<!-- Garchomp surpresa -->
 <img id="garchomp" src="garchomp.png">
 
 <div id="garchompPopup">
+
 <div class="popupContent">
+
 <img src="garchomp.png">
-<p>rawr! 🦈</p>
-</div>
+<p>rawr 🦈</p>
+
 </div>
 
-<audio id="squeak">
-<source src="squeak.mp3" type="audio/mpeg">
-</audio>
+</div>
+
+<audio id="squeak" src="squeak.mp3"></audio>
 
 <script src="script.js"></script>
 
 </body>
-
 </html>
