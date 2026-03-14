@@ -12,6 +12,15 @@ cursor:url("normal.png") 8 8, auto;
 overflow-x:hidden;
 }
 
+button,
+.opcao,
+.opcao img,
+.magical-btn {
+
+cursor:url("normal.png") 8 8, pointer;
+
+}
+
 /* movimento suave do degradê */
 
 @keyframes gradientMove{
