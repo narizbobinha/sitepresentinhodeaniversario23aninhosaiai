@@ -143,6 +143,9 @@ document.getElementById("videoContainer").innerHTML=
 
 const stack = document.getElementById("stack")
 const polaroids = document.querySelectorAll(".polaroid")
+polaroids.forEach(p => {
+p.ondragstart = () => false
+})
 
 let active = null
 let offsetX = 0
