@@ -1,24 +1,28 @@
 const musica = document.getElementById("musica")
 
+/* ---------------- POEMAS ---------------- */
+
 const poemas=[
 
-`Que meu amor por você seja o único idioma que você entenda, que seja o altar mais alto para você ficar e que meus sentimentos sejam sua única demanda.`,
+`Que meu amor por você seja o único idioma que você entenda, que seja o altar mais alto para você ficar e que meus sentimentos sejam sua única demanda. Espero que meu calor transpareça segurança para você, pois é nas chamas que se cria a paixão.`,
 
-`O mundo pode tentar convencer-te de que teus sonhos são grandes demais.`,
+`O mundo pode tentar convencer-te de que teus sonhos são grandes demais, ou que teus passos são lentos demais. Pode dizer que a estrada é longa, que o tempo não basta, que a esperança é ingênua. Mas o mundo raramente entende o coração de quem insiste.`,
 
-`Se um dia tua fé em si mesmo vacilar, empresto-te a minha.`,
+`Se um dia tua fé em si mesmo vacilar, empresto-te a minha. Porque às vezes enxergamos nos outros uma luz que eles mesmos esqueceram que possuem.`,
 
-`Se eu pudesse te dar um presente digno, não seria algo que coubesse nas mãos.`,
+`Se eu pudesse te dar um presente digno, não seria algo que coubesse nas mãos. Seria um instante eterno, um fragmento de paz, um abrigo onde você pudesse sempre voltar.`,
 
 `sei que não sou o que deseja.`,
 
 `você me mata, mas também me devolve à vida.`,
 
-`não é que eu só vivo se eu tiver você é que eu vivo por você.`,
+`não é que eu só vivo se eu tiver você.  
+é que eu vivo por você.`,
 
-`Feliz aniversário, eu gosto muito de você.`,
+`Feliz aniversário.  
+eu gosto muito de você.`,
 
-`nossa fazer site é difícil ne`
+`nossa fazer site é difícil né`
 
 ]
 
@@ -40,7 +44,7 @@ poemaEl.innerText=poemas[index]
 
 }
 
-
+/* ---------------- GIF HOVER ---------------- */
 
 function gifA(){
 document.getElementById("imgA").src="opcaoA.gif"
@@ -58,7 +62,7 @@ function pngB(){
 document.getElementById("imgB").src="opcaoB.png"
 }
 
-
+/* ---------------- ESCOLHA ---------------- */
 
 function escolha(opcao){
 
@@ -82,7 +86,7 @@ musica.play()
 
 }
 
-
+/* ---------------- VIDEO FINAL ---------------- */
 
 function mostrarVideo(video){
 
@@ -96,6 +100,45 @@ document.getElementById("videoContainer").innerHTML=
 </video>`
 
 }
+
+/* ---------------- ARRASTAR POLAROID ---------------- */
+
+const polaroids=document.querySelectorAll(".polaroid")
+
+let current=null
+let offsetX=0
+let offsetY=0
+
+polaroids.forEach(card=>{
+
+card.addEventListener("mousedown",(e)=>{
+
+current=card
+
+const rect=card.getBoundingClientRect()
+
+offsetX=e.clientX-rect.left
+offsetY=e.clientY-rect.top
+
+})
+
+})
+
+document.addEventListener("mousemove",(e)=>{
+
+if(!current) return
+
+current.style.left=(e.clientX-offsetX)+"px"
+current.style.top=(e.clientY-offsetY)+"px"
+
+})
+
+document.addEventListener("mouseup",()=>{
+
+current=null
+
+})
+
 
 
 
