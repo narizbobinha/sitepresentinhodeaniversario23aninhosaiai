@@ -29,206 +29,133 @@ button,.polaroid,.opcao{
 cursor:url("point.png") 8 8,pointer;
 }
 
-@keyframes gradientBG{
+.hidden{
+display:none;
+}
 
+@keyframes gradientBG{
 0%{background-position:0% 50%}
 50%{background-position:100% 50%}
 100%{background-position:0% 50%}
-
 }
 
 #cursor-glow{
-
 position:fixed;
-
 width:250px;
 height:250px;
-
 background:radial-gradient(circle,rgba(123,255,186,0.15),transparent 70%);
-
 border-radius:50%;
-
 pointer-events:none;
-
 transform:translate(-50%,-50%);
-
 z-index:9999;
-
 }
 
 #stars{
-
 position:fixed;
-
 width:100%;
 height:200%;
-
 background-image:radial-gradient(white 1px,transparent 1px);
-
 background-size:80px 80px;
-
 opacity:0.2;
-
 animation:starsFall 120s linear infinite;
-
 }
 
 @keyframes starsFall{
-
 0%{transform:translateY(0)}
 100%{transform:translateY(-50%)}
-
 }
 
 section{
-
 min-height:100vh;
-
 display:flex;
-
 flex-direction:column;
-
 justify-content:center;
-
 align-items:center;
-
 gap:40px;
-
 }
 
 .glow-text{
-
 font-family:'Cormorant Garamond',serif;
-
 font-size:4rem;
-
 text-shadow:0 0 20px var(--accent);
-
 text-align:center;
-
 }
 
 .opcoes{
-
 display:flex;
-
 gap:80px;
-
 }
 
 .opcao img{
-
 width:260px;
 height:260px;
-
 border-radius:20px;
-
 }
 
 #linha{
-
-width:900px;
+width:800px;
 height:2px;
-
 background:white;
-
 box-shadow:0 0 15px white;
-
 margin-bottom:80px;
-
 }
 
 #stack{
-
 position:relative;
-
 width:500px;
 height:350px;
-
 }
 
 .polaroid{
-
 position:absolute;
-
 background:white;
-
 padding:12px;
-
 border-radius:8px;
-
 box-shadow:0 10px 30px rgba(0,0,0,0.4);
-
 }
 
 .polaroid img{
-
 width:320px;
 height:320px;
-
 object-fit:cover;
-
 }
 
 .polaroid:nth-child(1){
-
 transform:rotate(-6deg);
 top:0;
-left:40px;
-
+left:60px;
 }
 
 .polaroid:nth-child(2){
-
 transform:rotate(7deg);
 top:20px;
-left:120px;
-
+left:160px;
 }
 
 .poemaBox{
-
 max-width:800px;
-
 background:rgba(0,0,0,0.4);
-
 backdrop-filter:blur(10px);
-
 padding:60px;
-
 border-radius:25px;
-
 font-family:'Cormorant Garamond',serif;
-
 font-size:2rem;
-
 text-align:center;
-
 }
 
 .magical-btn{
-
 padding:15px 40px;
-
 border-radius:30px;
-
 border:1px solid white;
-
 background:transparent;
-
 color:white;
-
 font-size:1.2rem;
-
 }
 
 video{
-
 margin-top:40px;
-
 height:500px;
-
 border-radius:20px;
-
 }
+
 
