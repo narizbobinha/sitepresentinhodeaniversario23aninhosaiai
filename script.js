@@ -4,25 +4,63 @@ const musica = document.getElementById("musica")
 
 const poemas=[
 
-`Que meu amor por você seja o único idioma que você entenda, que seja o altar mais alto para você ficar e que meus sentimentos sejam sua única demanda. Espero que meu calor transpareça segurança para você, pois é nas chamas que se cria a paixão.`,
+`Que meu amor por você seja o único idioma que você entenda, que seja o altar mais alto para você ficar e que meus sentimentos sejam sua única demanda. 
+Espero que meu calor transpareça segurança para você, pois é nas chamas que se cria a paixão.`,
 
-`O mundo pode tentar convencer-te de que teus sonhos são grandes demais, ou que teus passos são lentos demais. Pode dizer que a estrada é longa, que o tempo não basta, que a esperança é ingênua. Mas o mundo raramente entende o coração de quem insiste.`,
+`O mundo pode tentar convencer-te de que teus sonhos são grandes demais, ou que teus passos são lentos demais.
+Mas eu conheço o teu espírito. E sei que dentro de ti existe um homem capaz de atravessar noites inteiras de dúvida,
+apenas para alcançar a própria luz.
+Mesmo que confuso ou inseguro, seus desejos nunca foram impuros.
+Se um dia tua fé em si mesmo vacilar, empresto-te a minha.
+Pois eu acredito em você com a mesma intensidade
+com que o meu coração aprendeu a amar você.`,
 
-`Se um dia tua fé em si mesmo vacilar, empresto-te a minha. Porque às vezes enxergamos nos outros uma luz que eles mesmos esqueceram que possuem.`,
+`Se eu pudesse te dar um presente digno, não seria algo que coubesse nas mãos.
+Eu te daria minhas madrugadas pensando em você, minhas preces silenciosas pelo teu caminho,
+e essa estranha devoção que faz minha alma se inclinar sempre na tua direção.
+Que a vida te leve longe, tão longe quanto teus sonhos permitirem.
+E se algum dia, no meio do caminho, olhares para trás, espero ainda estar ali,
+não como peso, mas como abrigo.`,
 
-`Se eu pudesse te dar um presente digno, não seria algo que coubesse nas mãos. Seria um instante eterno, um fragmento de paz, um abrigo onde você pudesse sempre voltar.`,
+`sei que não sou o que deseja, não sou o remédio que cura tuas dores, nem o escudo que te livra das fraquezas.
+sou apenas a verdade nua, que não se molda, mesmo quando se oferece inteira.
+e, ainda assim, teu olhar me fere e me salva, me arrasta para um abismo doce, onde me rendo ao teu domínio silencioso.
+O que vivi contigo não foram dias, foram eternidades comprimidas em instantes, relâmpagos que incendiaram minha alma.
+sonhei, em segredo, com o direito de te chamar de meu namorado,
+mesmo que fosse um sonho tolo, um delírio antiquado.
+por mais que eu lute, não consigo expulsar-te de mim.`,
 
-`sei que não sou o que deseja.`,
+`você me mata, mas também me devolve à vida.
+me destrói como um muro caindo, mas é a mão que recolhe os cacos da minha essência.
+e se te amar é condenação, aceito a sentença sem apelo.
+pois entre o vazio da indiferença e a dor ardente da tua ausência,
+prefiro arder, prefiro sangrar,
+prefiro perder-me em ti.`,
 
-`você me mata, mas também me devolve à vida.`,
+`e se eu tivesse que escolher, entre passar anos sem você, e ter a paz que prometem a mim
+eu escolheria passar por todo o caos que a vida proporciona, apenas para viver contigo até o fim
+sei que não posso te entregar o que quer, mas você pode ter a mim.
+não é muito, não é valioso nem honroso,
+mas prometo que a ti, destruo toda minha carne e o mofo que em meu coração, envolto.
+a dor que passei por te perder nem se compara a morte vir me deter de viver.
+todo esse luto eterno, o desespero de não ter seu abraço, é a pior tortura que poderiam me submeter.
+não é que eu só vivo se eu tiver você, é que eu vivo POR você.`,
 
-`não é que eu só vivo se eu tiver você.  
-é que eu vivo por você.`,
+`Feliz aniversário, eu gosto muito de você, de verdade acho que você foi a única pessoa que eu mais me importei e desejei em minha vida. 
+Eu sei que o sentimento não é recíproco e tá tudo bem, por mais que me magoe me deixa feliz também a oportunidade de poder expressar o que sinto por você. 
+Eu gosto de te fazer bem, de te fazer se sentir amado e reconhecido. 
+se eu tivesse a oportunidade, faria diariamente, mesmo com meus defeitos. 
+eu espero que seu dia seja bom, espero que você consiga aproveitar ele sem nenhum tipo de problema ou acasos ruins. 
+você é incrível, esperto, genial e esforçado, te conhecer me fez passar por várias situações e sentimentos, 
+todos que eu guardo igualmente como algo especial que me moldou. eu não esqueceria eles nem os trocaria por nada.
+por mais que passem anos, você sempre vai passar na minha cabeça, seja como uma memória persistente ou so um lapso rápido, 
+acho que você vai sempre ter meu coração nas suas mãos. desejo todo sucesso para ti!! te amo narigudo`,
 
-`Feliz aniversário.  
-eu gosto muito de você.`,
+`nossa fazer site é difícil ne`,
 
-`nossa fazer site é difícil né`
+`enquanto tava corrigindo os erros, abri mais um espaço pra poder escrever isso aqui e dizer q n entendo pq vc é tão cruel comigokkkjk
+mas tudo bem, espero que a pessoa cm quem vc ta se relacionando agr seja legal`,
+
 
 ]
 
