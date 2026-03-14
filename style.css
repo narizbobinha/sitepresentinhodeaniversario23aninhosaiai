@@ -1,68 +1,13 @@
-:root{
---bg1:#0b0f19;
---bg2:#16213e;
---bg3:#0f3460;
---accent:#7bffba;
-}
-
 body{
-
 margin:0;
-
 font-family:'Quicksand',sans-serif;
-
-background:linear-gradient(-45deg,var(--bg1),var(--bg2),var(--bg3),#000);
-
-background-size:400% 400%;
-
-animation:gradientBG 20s ease infinite;
-
+background:#0b0f19;
 color:white;
-
-overflow-x:hidden;
-
 cursor:url("normal.png") 8 8, auto;
-
 }
 
 button,.polaroid,.opcao{
 cursor:url("point.png") 8 8,pointer;
-}
-
-.hidden{
-display:none;
-}
-
-@keyframes gradientBG{
-0%{background-position:0% 50%}
-50%{background-position:100% 50%}
-100%{background-position:0% 50%}
-}
-
-#cursor-glow{
-position:fixed;
-width:250px;
-height:250px;
-background:radial-gradient(circle,rgba(123,255,186,0.15),transparent 70%);
-border-radius:50%;
-pointer-events:none;
-transform:translate(-50%,-50%);
-z-index:9999;
-}
-
-#stars{
-position:fixed;
-width:100%;
-height:200%;
-background-image:radial-gradient(white 1px,transparent 1px);
-background-size:80px 80px;
-opacity:0.2;
-animation:starsFall 120s linear infinite;
-}
-
-@keyframes starsFall{
-0%{transform:translateY(0)}
-100%{transform:translateY(-50%)}
 }
 
 section{
@@ -77,8 +22,7 @@ gap:40px;
 .glow-text{
 font-family:'Cormorant Garamond',serif;
 font-size:4rem;
-text-shadow:0 0 20px var(--accent);
-text-align:center;
+text-shadow:0 0 15px #7bffba;
 }
 
 .opcoes{
@@ -93,10 +37,9 @@ border-radius:20px;
 }
 
 #linha{
-width:800px;
+width:700px;
 height:2px;
 background:white;
-box-shadow:0 0 15px white;
 margin-bottom:80px;
 }
 
@@ -115,27 +58,24 @@ box-shadow:0 10px 30px rgba(0,0,0,0.4);
 }
 
 .polaroid img{
-width:320px;
-height:320px;
+width:300px;
+height:300px;
 object-fit:cover;
 }
 
 .polaroid:nth-child(1){
-transform:rotate(-6deg);
 top:0;
-left:60px;
+left:80px;
 }
 
 .polaroid:nth-child(2){
-transform:rotate(7deg);
-top:20px;
-left:160px;
+top:30px;
+left:200px;
 }
 
 .poemaBox{
 max-width:800px;
-background:rgba(0,0,0,0.4);
-backdrop-filter:blur(10px);
+background:rgba(0,0,0,0.5);
 padding:60px;
 border-radius:25px;
 font-family:'Cormorant Garamond',serif;
@@ -157,5 +97,6 @@ margin-top:40px;
 height:500px;
 border-radius:20px;
 }
+
 
 
