@@ -225,6 +225,28 @@ bubble.remove()
 
 setInterval(createBubble,800)
 
+const garchomp = document.getElementById("garchomp");
+const popup = document.getElementById("garchompPopup");
+const squeak = document.getElementById("squeak");
+
+garchomp.addEventListener("click", () => {
+
+popup.style.display = "flex";
+
+squeak.currentTime = 0;
+squeak.play();
+
+confetti({
+particleCount:120,
+spread:70,
+origin:{y:0.6}
+});
+
+});
+
+popup.addEventListener("click", ()=>{
+popup.style.display="none";
+});
 
 
 
